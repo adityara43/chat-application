@@ -26,7 +26,10 @@ function ChatArea( {props} ) {
       
         <MessageOthers />
         <MessageSelf />
-        
+        <MessageOthers />
+        <MessageSelf /> <MessageOthers />
+        <MessageSelf /> <MessageOthers />
+        <MessageSelf />
         
 
     </div>

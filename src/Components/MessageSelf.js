@@ -1,0 +1,18 @@
+import React from "react";
+
+
+function MessageSelf() {
+    var props2={ name: "you", message: "This is a sample message"};
+
+    return (
+    <div className="self-message-container">
+        <div className="messagebox">
+            <p>{props2.message}</p>
+            <p className="self-timeStamp">12:02am</p>
+        </div>
+    </div>
+    );
+}
+
+
+export default MessageSelf;

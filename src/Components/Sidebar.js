@@ -9,6 +9,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import { IconButton } from "@mui/material";
 import ConversationsItem from "./ConversationsItem";
 import ChatArea from "./ChatArea";
+import { useNavigate } from "react-router-dom";
 
 function Sidebar() {
   const [conversations,setConversations]=useState([
@@ -28,26 +29,27 @@ function Sidebar() {
       timeStamp:"Today",
     },
   ]);
+  var navigate=useNavigate();
   return ( <div className="Sidebar-container">
     <div className="sb-header">
       <div>
-      <IconButton>
-      <AccountCircleIcon />
-      </IconButton>
+        <IconButton>
+          <AccountCircleIcon />
+        </IconButton>
       </div>
       <div>
-      <IconButton>
-        <PersonAddIcon />
-      </IconButton>
-      <IconButton>
-        <GroupAddIcon />
-      </IconButton>
-      <IconButton>
-        <AddCircleIcon />
-      </IconButton>
-      <IconButton>
-        <NightlightIcon />
-      </IconButton>
+        <IconButton onClick={()=> {navigate("users-groups")}}>
+          <PersonAddIcon />
+        </IconButton>
+        <IconButton onClick={()=> {navigate("users-groups")}}>
+          <GroupAddIcon />
+        </IconButton>
+        <IconButton onClick={()=> {navigate("create-groups")}}>
+          <AddCircleIcon />
+        </IconButton>
+        <IconButton>
+          <NightlightIcon />
+        </IconButton>
       </div>
       
       

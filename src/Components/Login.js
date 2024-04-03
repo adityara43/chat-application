@@ -18,7 +18,7 @@ function Login() {
                     variant="outlined" />
                 <TextField 
                     id="outlined-password-input"
-                    Label="Password"
+                    label="Password"
                     type="password"
                     autoComplete="current-password"
                 />

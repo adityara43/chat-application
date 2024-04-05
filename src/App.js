@@ -6,7 +6,9 @@ import { Route, Routes } from "react-router-dom";
 import Welcome from "./Components/Welcome";
 import ChatArea from "./Components/ChatArea";
 import CreateGroup from "./Components/CreateGroup";
-import Users_Groups from "./Components/Users_Groups";
+
+import Users from "./Components/Users";
+import Groups from "./Components/Groups";
 
 function App() {
   return (
@@ -19,8 +21,8 @@ function App() {
           <Route path="app" element={<MainContainer />} >
             <Route path="welcome" element={<Welcome />} />
             <Route path="chat" element={<ChatArea />} />
-            <Route path="users-groups" element={<Users_Groups />} />
-            
+            <Route path="users" element={<Users />} />
+            <Route path="groups" element={<Groups />} />
             <Route path="create-groups" element={<CreateGroup />} />
             </Route>
         </Routes>

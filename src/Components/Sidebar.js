@@ -11,7 +11,11 @@ import ConversationsItem from "./ConversationsItem";
 import ChatArea from "./ChatArea";
 import { useNavigate } from "react-router-dom";
 
+
+
 function Sidebar() {
+  const navigate=useNavigate();
+  
   const [conversations,setConversations]=useState([
     {
       name:"Test#1",
@@ -29,7 +33,6 @@ function Sidebar() {
       timeStamp:"Today",
     },
   ]);
-  var navigate=useNavigate();
   return ( <div className="Sidebar-container">
     <div className="sb-header">
       <div>
@@ -38,13 +41,13 @@ function Sidebar() {
         </IconButton>
       </div>
       <div>
-        <IconButton onClick={()=> {navigate("users-groups")}}>
+        <IconButton onClick={()=> {navigate("users");}}>
           <PersonAddIcon />
         </IconButton>
-        <IconButton onClick={()=> {navigate("users-groups")}}>
+        <IconButton onClick={()=> {navigate("groups");}}>
           <GroupAddIcon />
         </IconButton>
-        <IconButton onClick={()=> {navigate("create-groups")}}>
+        <IconButton onClick={()=> {navigate("create-groups");}}>
           <AddCircleIcon />
         </IconButton>
         <IconButton>
@@ -61,7 +64,9 @@ function Sidebar() {
     </div>
     <div className="sb-conversations">
       {conversations.map((conversation) => {
-         return <ConversationsItem props={conversation} key={conversation.name}/>;
+         return <ConversationsItem props={conversation} key={conversation.name}
+        
+        />;
       })}
     </div>
   </div>

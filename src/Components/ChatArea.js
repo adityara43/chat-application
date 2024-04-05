@@ -25,7 +25,7 @@ function ChatArea() {
       timeStamp:"Today",
     },
   ]);
-  var props=conversations[0];
+  const props=conversations[0];
   return (
     
     <div className="chatArea-container" >

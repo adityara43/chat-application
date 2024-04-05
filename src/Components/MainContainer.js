@@ -4,8 +4,10 @@ import Sidebar from "./Sidebar";
 import ChatArea from "./ChatArea";
 import Welcome from "./Welcome"
 import CreateGroup from "./CreateGroup";
-import Users_Groups from "./Users_Groups";
+
 import { Outlet } from "react-router-dom";
+import Users from "./Users";
+import Groups from "./Groups";
 
 
 function MainContainer() {
@@ -19,7 +21,8 @@ function MainContainer() {
     {/* <Welcome />  */}
     {/* <CreateGroup /> */}
      {/* <ChatArea props={conversations[0]} />   */}
-     {/* <Users_Groups />  */}
+    {/* <Users /> */}
+    {/* <Groups /> */}
 
   </div>
   );   
